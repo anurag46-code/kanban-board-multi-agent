@@ -72,7 +72,11 @@ function App() {
   const [newTaskPriority, setNewTaskPriority] = useState<'low' | 'medium' | 'high'>('medium')
 
   useEffect(() => {
-    const newSocket = io('http://localhost:3001', {
+    const socketUrl = window.location.hostname === 'localhost' 
+      ? 'http://localhost:3001'
+      : 'https://kanban-board-fawn-ten.vercel.app'
+    
+    const newSocket = io(socketUrl, {
       transports: ['websocket']
     })
 
