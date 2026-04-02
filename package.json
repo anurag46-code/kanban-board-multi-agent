@@ -1,0 +1,42 @@
+{
+  "name": "multi-agent-kanban-board",
+  "version": "1.0.0",
+  "description": "Intelligent Kanban board with automatic task assignment to multi-agent team",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "start": "cd backend && npm start",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && npm test",
+    "deploy": "vercel --prod"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "kanban",
+    "multi-agent",
+    "task-management",
+    "productivity",
+    "react",
+    "nodejs",
+    "websocket",
+    "real-time"
+  ],
+  "author": "Multi-Agent Team (Laude, Codex, Clarity, Sentinel, Nexus)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anurag46-code/multi-agent-kanban-board"
+  },
+  "homepage": "https://kanban-board-multi-agent.vercel.app",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
